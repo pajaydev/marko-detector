@@ -5,5 +5,9 @@
   "description": "Detect Websites using Marko and shows the layout",
   "author": "Ajaykumar Prathap",
   "version": "1.0",
-  "page_action": {}
+  "page_action": {},
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  }
 }
