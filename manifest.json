@@ -5,29 +5,27 @@
   "description": "Detect Websites using Marko and shows the layout",
   "author": "Ajaykumar Prathap",
   "version": "1.0",
-  "page_action": {
-  	"default_icon": {
-      "19": "images/marko_logo_19.png",
-      "38": "images/marko_logo_38.png"
-    },
-    "default_title": "MarkoJS"
-  },
-  "icons": {
-    "19": "images/marko_logo_19.png",
-    "38": "images/marko_logo_38.png"
-  },
-   "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["js/script.js"]
-    }
-  ],
   "background": {
     "scripts": ["js/background.js"],
     "persistent": false
   },
-   "permissions": [
-    "activeTab",
-    "declarativeContent"
+  "page_action": {
+  	"default_icon": {
+      "19": "images/marko_logo_19.png",
+      "38": "images/marko_logo_38.png",
+      "48": "images/marko_logo_48.png"
+    },
+    "default_title": "Built with MarkoJS"
+  },
+  "icons": {
+    "19": "images/marko_logo_19.png",
+    "38": "images/marko_logo_38.png",
+    "48": "images/marko_logo_48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/script.js"]
+    }
   ]
 }
