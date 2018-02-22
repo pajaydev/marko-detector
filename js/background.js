@@ -1,7 +1,7 @@
 //console.log(window.$markoWidgetsConfig);
 let markoWidgetsConfig = false;
 let applyStyles = false;
-var outlinesStyleNode = null;
+let componentNode = null;
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.marko) {
