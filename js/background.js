@@ -1,5 +1,7 @@
 //console.log(window.$markoWidgetsConfig);
 let markoWidgetsConfig = false;
+let applyStyles = false;
+var outlinesStyleNode = null;
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.marko) {
@@ -12,10 +14,11 @@ chrome.runtime.onMessage.addListener(
   });
 
 chrome.pageAction.onClicked.addListener(function(tab) {
+	console.log(applyStyles);
   chrome.tabs.executeScript(tab.id, {
-    code: 'var markoConfig = ' + markoWidgetsConfig
+    code: 'var applyStyle = ' + !applyStyles
     }, function() {
-    chrome.tabs.executeScript(tab.id, {file: 'js/showcomponents.js'});
+    chrome.tabs.executeScript(tab.id, {file: 'js/highlightcomponents.js'});
 });
 
 });
